@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TrustToken 🚀 — Landing</title>
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#000; color:#FFD700; text-align:center; }
+    header { padding:2rem; background:#111; }
+    header img { height:60px; animation:pulse 3s infinite; }
+    @keyframes pulse { 0%,100% { transform:scale(1); } 50% { transform:scale(1.05); } }
+    h1 { font-size:2.5rem; margin:1rem 0; }
+    p { max-width:600px; margin:0 auto 2rem; }
+    .btn { background:#FFD700; color:#000; padding:0.75rem 1.5rem; border-radius:8px; text-decoration:none; font-weight:bold; transition:0.3s; display:inline-block; }
+    .btn:hover { box-shadow:0 0 20px #FFD700; }
+    .tokenomics { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin:2rem auto; max-width:900px; }
+    .card { background:#111; padding:1.5rem; border-radius:12px; flex:1; min-width:200px; transition:transform 0.3s; }
+    .card:hover { transform:translateY(-5px); }
+    footer { padding:2rem; background:#111; margin-top:2rem; }
+    footer a { color:#FFD700; margin:0 0.5rem; text-decoration:none; }
+    footer img { height:40px; transition:transform 2s linear; }
+    footer img:hover { transform:rotate(360deg); }
+    .contract-box { background:#111; padding:1rem; margin:2rem auto; max-width:600px; border-radius:8px; }
+    .contract-text { font-family:monospace; margin-bottom:1rem; word-wrap:break-word; }
+    .copy-btn { background:#FFD700; color:#000; padding:0.5rem 1rem; border:none; border-radius:6px; cursor:pointer; font-weight:bold; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="trusttoken-logo.png" alt="TrustToken Logo" />
+    <h1>Welcome to TrustToken 🚀</h1>
+    <p>The next-generation community-powered token with transparency and growth at its core.</p>
+    <a href="#buy" class="btn">Buy TrustToken</a>
+  </header>
+
+  <section>
+    <h2>About TrustToken</h2>
+    <p>TrustToken 🚀 is designed to create value for holders with fair launch mechanics, locked liquidity, and active community governance.</p>
+  </section>
+
+  <section>
+    <h2>Tokenomics</h2>
+    <div class="tokenomics">
+      <div class="card">
+        <h3>Total Supply</h3>
+        <p>1,000,000,000</p>
+      </div>
+      <div class="card">
+        <h3>Buy/Sell Tax</h3>
+        <p>5%</p>
+      </div>
+      <div class="card">
+        <h3>Liquidity</h3>
+        <p>Locked 🔒</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="buy">
+    <h2>Buy TrustToken</h2>
+    <div class="contract-box">
+      <div class="contract-text" id="contractAddress">0xYOUR_CONTRACT_ADDRESS_HERE</div>
+      <button class="copy-btn" onclick="copyAddress()">Copy Address</button>
+    </div>
+    <a href="https://pancakeswap.finance/swap?outputCurrency=0xYOUR_CONTRACT_ADDRESS_HERE" target="_blank" class="btn">Buy on DEX</a>
+  </section>
+
+  <footer>
+    <p>Join our community:</p>
+    <a href="https://t.me/Trusttoken1" target="_blank">Telegram</a> | 
+    <a href="https://x.com/TrustToken_1?t=8N6crIERp2coxbULUbAqcA&s=09" target="_blank">X (Twitter)</a>
+    <div style="margin-top:1rem;">
+      <img src="trusttoken-logo.png" alt="TrustToken Logo" />
+    </div>
+    <p style="margin-top:1rem;">© 2025 TrustToken 🚀. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function copyAddress() {
+      const addr = document.getElementById("contractAddress").innerText;
+      navigator.clipboard.writeText(addr).then(() => {
+        alert("Contract address copied!");
+      });
+    }
+  </script>
+</body>
+</html>
