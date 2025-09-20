@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trust Token (TRST) | Secure, Transparent & Reliable Web3 Asset 🚀</title>
+  <meta name="description" content="Gold-standard vision & community-driven future. Join TrustToken (TRST) for a secure, transparent and reliable Web3 experience.">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      background: #000;
+      z-index: 1000;
+    }
+    header img {
+      height: 60px;
+      width: auto;
+    }
+    main {
+      margin-top: 100px;
+      padding: 20px;
+    }
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: #111;
+      color: #FFD700;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .hero h3 {
+      font-size: 1.5em;
+      font-weight: normal;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img src="trusttoken-logo.png" alt="TrustToken Logo">
+    </a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Trust Token (TRST) 🚀</h1>
+      <p>Secure, transparent & reliable Web3 asset</p>
+      <h3>Gold-standard vision & community-driven future</h3>
+    </section>
+
+    <section>
+      <h2>About TrustToken 🚀</h2>
+      <p>TrustToken (TRST) is designed to be secure, transparent, and reliable for the Web3 era. 
+      Our mission is to set the gold standard in decentralized finance with a community-driven vision.</p>
+    </section>
+
+    <section>
+      <h2>💧 Liquidity & Contract</h2>
+      <p><strong>Liquidity:</strong> Locked 🔒</p>
+      <p><strong>Contract Address:</strong></p>
+      <pre id="contract">0x0000000000000000000000000000000000000000</pre>
+      <button onclick="copyContract()">Copy Address</button>
+    </section>
+  </main>
+
+  <script>
+    function copyContract() {
+      const contract = document.getElementById('contract').innerText;
+      navigator.clipboard.writeText(contract).then(() => {
+        alert('Contract address copied!');
+      });
+    }
+  </script>
+</body>
+</html>
