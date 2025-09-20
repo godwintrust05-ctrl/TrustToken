@@ -1,109 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TrustToken 🚀</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: #0a0a0a;
-      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background: #f4f4f4;
     }
     header {
       background: #111;
       padding: 20px;
-      text-align: center;
     }
     header h1 {
-      margin: 0 0 15px 0;
-      color: #f1c40f;
+      color: white;
     }
-    .btn-container {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
+    .buttons {
+      margin: 20px 0;
     }
     .btn {
       display: inline-block;
       padding: 12px 24px;
-      border-radius: 8px;
-      background: #f1c40f;
-      color: #111 !important;
-      font-weight: bold;
+      margin: 5px;
+      font-size: 16px;
       text-decoration: none;
-      transition: background 0.3s ease;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .telegram {
+      background: gold;
+      color: black;
+    }
+    .x {
+      background: black;
+      color: white;
+      border: 2px solid white;
     }
     .btn:hover {
-      background: #d4ac0d;
+      opacity: 0.8;
     }
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .tokenomics {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .card {
-      background: #1c1c1c;
+    main {
       padding: 20px;
-      border-radius: 10px;
-      width: 200px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .contract-box {
+      background: #fff;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      display: inline-block;
+      padding: 15px 20px;
+      margin-top: 10px;
+      font-family: monospace;
+      font-size: 14px;
+    }
+    .copy-btn {
+      display: block;
+      margin: 10px auto;
+      padding: 8px 16px;
+      background: gold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .copy-btn:hover {
+      opacity: 0.8;
     }
     footer {
       background: #111;
+      color: white;
       padding: 20px;
-      text-align: center;
-      font-size: 14px;
+      margin-top: 40px;
     }
     footer a {
-      color: #f1c40f;
-      margin: 0 10px;
+      color: gold;
       text-decoration: none;
+      margin: 0 10px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>TrustToken 🚀</h1>
-    <div class="btn-container">
-      <a class="btn" href="https://t.me/Trust_Token0" target="_blank">Join Telegram</a>
-      <a class="btn" href="https://x.com/TrustToken_1?t=8N6crIERp2coxbULUbAqcA&s=09" target="_blank">Follow on X</a>
+    <h1>Welcome to TrustToken 🚀</h1>
+    <div class="buttons">
+      <a href="https://t.me/Trust_Token0" class="btn telegram" target="_blank">Join Telegram</a>
+      <a href="https://x.com/TrustToken_1?t=8N6crIERp2coxbULUbAqcA&s=09" class="btn x" target="_blank">Follow on X</a>
     </div>
   </header>
 
-  <section>
-    <h2>Welcome to TrustToken 🚀</h2>
-    <p>The next-generation community token powered by transparency and trust.</p>
-  </section>
+  <main>
+    <h2>About TrustToken 🚀</h2>
+    <p>The future of decentralized trust and innovation. Stay connected with us on our channels.</p>
 
-  <section>
-    <h2>Tokenomics</h2>
-    <div class="tokenomics">
-      <div class="card">
-        <h3>Total Supply</h3>
-        <p>1,000,000,000</p>
-      </div>
-      <div class="card">
-        <h3>Buy/Sell Tax</h3>
-        <p>5%</p>
-      </div>
-      <div class="card">
-        <h3>Liquidity Lock</h3>
-        <p>1 Year</p>
-      </div>
-    </div>
-  </section>
+    <h2>💧 Liquidity & Contract</h2>
+    <p><strong>Liquidity:</strong> Locked 🔒</p>
+    <div class="contract-box" id="contract-address">0x0000000000000000000000000000000000000000</div>
+    <button class="copy-btn" onclick="copyAddress()">Copy Address</button>
+  </main>
 
   <footer>
-    <p>Join our community:</p>
-    <a href="https://t.me/Trust_Token0" target="_blank">Telegram</a> |
-    <a href="https://x.com/TrustToken_1?t=8N6crIERp2coxbULUbAqcA&s=09" target="_blank">X (Twitter)</a>
+    <p>Connect with us: 
+      <a href="https://t.me/Trust_Token0" target="_blank">Telegram</a> | 
+      <a href="https://x.com/TrustToken_1?t=8N6crIERp2coxbULUbAqcA&s=09" target="_blank">X</a>
+    </p>
+    <p>&copy; 2025 TrustToken 🚀</p>
   </footer>
+
+  <script>
+    function copyAddress() {
+      const address = document.getElementById("contract-address").innerText;
+      navigator.clipboard.writeText(address).then(() => {
+        alert("Contract address copied!");
+      });
+    }
+  </script>
 </body>
 </html>
